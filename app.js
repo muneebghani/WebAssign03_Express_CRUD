@@ -41,7 +41,7 @@ app.use(function (err, req, res, next) {
 
 mongoose
   .connect(
-    "mongodb+srv://munib:yGY7cN0jA0iAvOsR@webassignment03.4icws.mongodb.net/webs2lab?retryWrites=true&w=majority",
+    "mongodb+srv://munib:yGY7cN0jA0iAvOsR@webassignment03.4icws.mongodb.net/MusicalInstrumentsDB?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,

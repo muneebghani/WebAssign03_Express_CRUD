@@ -2,27 +2,24 @@ extends ../layout
 
 block content
     .row
+        .col-sm-8
+            h1 Admin Panel
+            h1=title
         .col-sm-4
-            a(href="/products/add", class="btn btn-dark float-left") Create New
-    .row.p-4
-        .col-sm-8.offset-3
-            h1.text-white Edureka's Course List
-    table.table.table-lg.table-striped.table-hover.text-black.bg-white
-        
+            a(href="/products/add", class="btn btn-success float-right") Add New Instrument
+    table.table
         thead
             tr
-                th Course Name
-                th Course Id
-                th Course Duration(Hrs)
-                th Course Fee(USD)
+                th Image
+                th Instrument
+                th Price(Rs)
                 th Actions
         tbody
             each product in products
                 tr
-                    td=product.crName
-                    td=product.id
-                    td=product.crDuration
-                    td=product.crFee
+                    td=product.image
+                    td=product.instrument
+                    td=product.price
                     td
-                        a(href="/products/edit/"+product._id) Edit
-                        a(href="/products/delete/"+product._id, class="ml-2") Delete
+                        a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
+                        a(href="/products/edit/"+product._id, class="btn btn-warning") Edit

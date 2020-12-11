@@ -1,19 +1,16 @@
 extends ../layout
 
 block content
-    h1 Edit Course
-    form(action="/products/edit/"+product._id,method="post")
+    h1 Edit Instrument
+    form(action="/products/edit/"+product._id,method="post" enctype="multipart/form-data")
         .form-group
-            label(for="name") Course Name
-            input#name(type="text", class="form-control", name="crName", value=product.crName)
+            label(for="image") Image
+            input#image(type="file", class="form-control", name="image", value=product.image)
         .form-group
-            label(for="instrument") Course Id
-            input#id(type="number", class="form-control", name="id", value=product.id)
+            label(for="instrument") Instrument Name
+            input#instrument(type="text", class="form-control", name="instrument", value=product.instrument)
         .form-group
-            label(for="price") Course Duration(Hrs)
-            input#duration(type="number", class="form-control", name="crDuration", value=product.crDuration)
-        .form-group
-            label(for="fee") Course Fee(USD)
-            input#duration(type="number", class="form-control", name="crFee", value=product.crFee)
-        input(type="submit", class="btn btn-dark")
+            label(for="price") Instrument Price(Rs)
+            input#price(type="number", class="form-control", name="price", value=product.price)
+        input(type="submit", class="btn btn-info")
     
